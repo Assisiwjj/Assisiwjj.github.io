@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Assisiwjj">
 <meta property="og:description" content="前言&amp;emsp;&amp;emsp;之前由于暑假要留下来做项目，所以匆匆学了点Java的语法以及相关内容就赶鸭子上架做起了后端。近期看了些别人关于实习的杂谈，深知自身基础薄弱。从今天开始重新细细学习《Java核心技术》，重学之前所囫囵吞枣或是有所遗漏的东西，完善自身的基础，也是对以前知识的回顾。同时也当作自己Java学习的记录和备忘录，以便翻阅。 Java概述&amp;emsp;&amp;emsp;在此之前，我曾一度因为">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-14T11:05:22.215Z">
+<meta property="og:updated_time" content="2019-04-14T13:27:10.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重拾Java一JAVA概述">
 <meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;之前由于暑假要留下来做项目，所以匆匆学了点Java的语法以及相关内容就赶鸭子上架做起了后端。近期看了些别人关于实习的杂谈，深知自身基础薄弱。从今天开始重新细细学习《Java核心技术》，重学之前所囫囵吞枣或是有所遗漏的东西，完善自身的基础，也是对以前知识的回顾。同时也当作自己Java学习的记录和备忘录，以便翻阅。 Java概述&amp;emsp;&amp;emsp;在此之前，我曾一度因为">
@@ -426,7 +426,7 @@
                 
               
 
-              <time title="创建时间：2019-04-14 18:37:07 / 修改时间：19:05:22" itemprop="dateCreated datePublished" datetime="2019-04-14T18:37:07+08:00">2019-04-14</time>
+              <time title="创建时间：2019-04-14 18:37:07 / 修改时间：21:27:10" itemprop="dateCreated datePublished" datetime="2019-04-14T18:37:07+08:00">2019-04-14</time>
             
 
             
@@ -489,8 +489,19 @@
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>&emsp;&emsp;面向对象设计是一种程序设计技能。它将重点放在数据（即对象）和对象的接口上。用木匠打一个比方，一个“面向对象的”木匠始终关注的是制作时的椅子，第二位才是使用的工具；一个“非面向对象的”木匠首先考虑的是使用的工具。现代的程序设计语言大多使用面向对象这一概念。</p>
 <h2 id="网络技能"><a href="#网络技能" class="headerlink" title="网络技能"></a>网络技能</h2><p>&emsp;&emsp;Java有一个拓展的例程库，用于处理像HTTP和FTP之类的TCP/IP协议。Java打开socket连接这类繁重的任务都会变得简单。</p>
 <h2 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h2><p>&emsp;&emsp;Java投入了大量的精力进行早期的问题检测、后期动态的（运行时）检测，并消除了有出错倾向的状态······Java能够实现许多指针才能实现的数据结构，同时不需要指针构造，绝对安全，永远不会存取一个“坏的”指针，造成内存分配的错误，也不必防范内存泄漏。</p>
-<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>Java设计成能够防范各种攻击，其中包括：  </p>
-<h2 id="体系结构中立"><a href="#体系结构中立" class="headerlink" title="体系结构中立"></a>体系结构中立</h2><h2 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h2><h2 id="解释性"><a href="#解释性" class="headerlink" title="解释性"></a>解释性</h2><h2 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h2 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h2>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><p>&emsp;&emsp;Java设计成能够防范各种攻击，其中包括：  </p>
+<ul>
+<li>运行时堆栈溢出。如，蠕虫等病毒常用的攻击手段。</li>
+<li>在自己的处理空间之外破坏内存。</li>
+<li>未经授权读写文件。</li>
+</ul>
+<h2 id="体系结构中立"><a href="#体系结构中立" class="headerlink" title="体系结构中立"></a>体系结构中立</h2><p>&emsp;&emsp;编译器生成一个体系结构中立的目标文件格式，这是一种编译过的代码，只要有Java运行时系统，就可以在许多处理器上运行。Java编译器通过生成与特定的计算机体系结构无关的字节码指令来实现这一特性。精心设计的字节码不仅可以很容易地在任何机器上解释执行，而且还可以迅速地翻译成本地机械码的代码。<br>&emsp;&emsp;虚拟机可以讲使用最频繁的字节码序列翻译成机器码，这一过程被称为即时编译。</p>
+<h2 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h2><p>&emsp;&emsp;Java中，数据格式具有固定的大小，这消除了代码移植时令人头痛的主要问题。二进制数据以固定的格式进行存储和传输，消除了字节顺序的困扰。</p>
+<h2 id="解释性"><a href="#解释性" class="headerlink" title="解释性"></a>解释性</h2><p>&emsp;&emsp;Java解释器可以在任何移植了解释器的机器上执行Java字节码。由于链接是一个增量式且轻量级的过程，所以，开发过程也变得更加快捷，更加具有探索性。</p>
+<h2 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h2><p>&emsp;&emsp;字节码可以（在运行时刻）快速地翻译成运行这个应用程序的特定CPU的机器码。</p>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>&emsp;&emsp;多线程可以带来更好的交互响应和实时行为。Java对多线程的处理十分便携。只要操作系统支持，Java中的线程就可以利用多个处理器。Java把多线程的实现交给了底层的操作系统或线程库来完成。</p>
+<h2 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h2><p>&emsp;&emsp;Java能够适应不断发展的环境。库中可以自由地添加新方法和实例变量，而对客户端没有任何影响。在Java中找出运行时类型信息十分简单（泛型特性）。</p>
+
       
     </div>
 
