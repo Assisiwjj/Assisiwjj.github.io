@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Assisiwjj">
 <meta property="og:description" content="一个简单的Java应用程序&amp;emsp;&amp;emsp;Java对大小写敏感，源文件名必须与公共类名相同。&amp;emsp;&amp;emsp;类格式：修饰符（public）+ class + 类名（ FirstSample ）首字母大写，驼峰命名，必须以字母开头，后面可以跟字母和数字的任意组合，不得使用 Java 保留字），main方法必须声明为public。12345public class FirstSampl">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-15T11:16:03.948Z">
+<meta property="og:updated_time" content="2019-04-15T11:58:44.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重拾Java（二）Java基本程序设计结构">
 <meta name="twitter:description" content="一个简单的Java应用程序&amp;emsp;&amp;emsp;Java对大小写敏感，源文件名必须与公共类名相同。&amp;emsp;&amp;emsp;类格式：修饰符（public）+ class + 类名（ FirstSample ）首字母大写，驼峰命名，必须以字母开头，后面可以跟字母和数字的任意组合，不得使用 Java 保留字），main方法必须声明为public。12345public class FirstSampl">
@@ -426,7 +426,7 @@
                 
               
 
-              <time title="创建时间：2019-04-15 18:47:11 / 修改时间：19:16:03" itemprop="dateCreated datePublished" datetime="2019-04-15T18:47:11+08:00">2019-04-15</time>
+              <time title="创建时间：2019-04-15 18:47:11 / 修改时间：19:58:44" itemprop="dateCreated datePublished" datetime="2019-04-15T18:47:11+08:00">2019-04-15</time>
             
 
             
@@ -549,19 +549,91 @@
 </tr>
 <tr>
 <td style="text-align:center">\t</td>
-<td style="text-align:center">退格</td>
+<td style="text-align:center">制表</td>
 </tr>
 <tr>
 <td style="text-align:center">\n</td>
-<td style="text-align:center">退格</td>
+<td style="text-align:center">换行</td>
 </tr>
 <tr>
 <td style="text-align:center">\r</td>
-<td style="text-align:center">退格</td>
+<td style="text-align:center">回车</td>
 </tr>
 </tbody>
 </table>
-
+<h2 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h2><p>false 或者 true</p>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>int x=(int)6.66=&gt;x=6</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>变量：第二个单词开始首字母大写，声明一个变量后必须用赋值语句对变量进行显式初始化。<br>常量：用final修饰，只能被赋值一次，常量名用全大写。<br>枚举类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">enum Size&#123;SMALL, MEDIUM, LARGE, EXTRA_LARGE&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">加</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">减</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">乘</td>
+</tr>
+<tr>
+<td style="text-align:center">++</td>
+<td style="text-align:center">自增</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">自减</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;&amp;</td>
+<td style="text-align:center">与</td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center">\</td>
+<td></td>
+<td>或</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:center">非</td>
+</tr>
+<tr>
+<td style="text-align:center">?:</td>
+<td style="text-align:center">三元操作符</td>
+</tr>
+</tbody>
+</table>
+<p>condition ? expression1 : expression2<br>当condition为真时计算第一个表达式，否则计算第2个表达式</p>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="equals"><a href="#equals" class="headerlink" title="equals()"></a>equals()</h2><p>如果两个字符串具有相同的字符和长度，它返回true，否则返回false。这种比较是区分大小写的。</p>
+<h2 id="空串和Null串"><a href="#空串和Null串" class="headerlink" title="空串和Null串"></a>空串和Null串</h2><p>空串 “” 时是长度为0的字符串。可以调用以下代码检测是否为空：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(str.length() == 0)</span><br><span class="line"></span><br><span class="line">if(str.equals(&quot;&quot;))</span><br></pre></td></tr></table></figure></p>
+<p>检查一个字符串是否为null：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if(str == null)</span><br></pre></td></tr></table></figure></p>
+<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2><p>用于需要由较短的字符串构建字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringBuffe builder = new StringBuffe();</span><br></pre></td></tr></table></figure></p>
+<p>当每次需要添加一部分内容时，调用append方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">builder.append(ch);</span><br><span class="line">builder.append(str);</span><br></pre></td></tr></table></figure></p>
+<h1 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h1><h2 id="读取输入"><a href="#读取输入" class="headerlink" title="读取输入"></a>读取输入</h2><p>Java的输入，用到Scanner类，可以用它创建一个对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner in = new Scanner(System.in);</span><br></pre></td></tr></table></figure></p>
+<p>然后 in 对象调用方法来从输入流中获取数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nextBoolean()</span><br><span class="line">nextByte()</span><br><span class="line">nextShort()</span><br><span class="line">nextInt()</span><br><span class="line">nextLong()</span><br><span class="line">nextFloat()</span><br><span class="line">nextLine()//包含空格</span><br><span class="line">next()//不包含空格</span><br></pre></td></tr></table></figure></p>
+<h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><ul>
+<li>可用 System.out.println() 或 System.out.print() 来向屏幕进行输出。</li>
+<li>jdk1.5 新增了和 C 语言中 printf 函数类似的数据输出方法</li>
+<li>System.out.printf (“格式控制部分”，表达式 1 ，表达式 2 ，……，表达式 n )</li>
+<li>格式控制部分由格式控制符号： %d , %c , %f , %s 和普通字符组成，普通 +  字符原样输出。格式控制符用来输出表达式的值。</li>
+<li>%d :输出 int 类型数据值</li>
+<li>%c :输出 int 类型数据</li>
+<li>%f :输出浮点型数据，小数点部分最多保留位</li>
+<li>%s :输出字符串数据</li>
+<li>%md :输出 int 型数据占 m 列</li>
+<li>%m.nf :输出的浮点型数据占 m 列，小数点保留 n 位</li>
+<li>格式字符串语法：每个格式控制以 % 开始，以空格或标点符号结尾。</li>
+</ul>
+<h1 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h1>
       
     </div>
 
@@ -808,7 +880,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个简单的Java应用程序"><span class="nav-number">1.</span> <span class="nav-text">一个简单的Java应用程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#整型"><span class="nav-number">3.1.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点类型"><span class="nav-number">3.2.</span> <span class="nav-text">浮点类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char类型"><span class="nav-number">3.3.</span> <span class="nav-text">char类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个简单的Java应用程序"><span class="nav-number">1.</span> <span class="nav-text">一个简单的Java应用程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#整型"><span class="nav-number">3.1.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点类型"><span class="nav-number">3.2.</span> <span class="nav-text">浮点类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char类型"><span class="nav-number">3.3.</span> <span class="nav-text">char类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#boolean类型"><span class="nav-number">3.4.</span> <span class="nav-text">boolean类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制类型转换"><span class="nav-number">3.5.</span> <span class="nav-text">强制类型转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量"><span class="nav-number">4.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">5.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number">6.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#equals"><span class="nav-number">6.1.</span> <span class="nav-text">equals()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空串和Null串"><span class="nav-number">6.2.</span> <span class="nav-text">空串和Null串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StringBuffer"><span class="nav-number">6.3.</span> <span class="nav-text">StringBuffer</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出"><span class="nav-number">7.</span> <span class="nav-text">输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#读取输入"><span class="nav-number">7.1.</span> <span class="nav-text">读取输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化输出"><span class="nav-number">7.2.</span> <span class="nav-text">格式化输出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#控制流程"><span class="nav-number">8.</span> <span class="nav-text">控制流程</span></a></li></ol></div>
             
 
           </div>
