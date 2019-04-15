@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://assisiwjj.github.io/2019/04/14/重拾Java（一）JAVA概述/">
+    <link itemprop="mainEntityOfPage" href="https://assisiwjj.github.io/2019/04/15/重拾Java（二）Java基本程序设计结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="WengYuanJun">
@@ -403,7 +403,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/14/重拾Java（一）JAVA概述/" class="post-title-link" itemprop="url">重拾Java一JAVA概述</a>
+                <a href="/2019/04/15/重拾Java（二）Java基本程序设计结构/" class="post-title-link" itemprop="url">重拾Java（二）Java基本程序设计结构</a>
               
             
           </h1>
@@ -428,12 +428,262 @@
                 
               
 
-              <time title="创建时间：2019-04-14 18:37:07 / 修改时间：21:27:10" itemprop="dateCreated datePublished" datetime="2019-04-14T18:37:07+08:00">2019-04-14</time>
+              <time title="创建时间：2019-04-15 18:47:11 / 修改时间：19:16:03" itemprop="dateCreated datePublished" datetime="2019-04-15T18:47:11+08:00">2019-04-15</time>
             
 
             
               
 
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一个简单的Java应用程序"><a href="#一个简单的Java应用程序" class="headerlink" title="一个简单的Java应用程序"></a>一个简单的Java应用程序</h1><p>&emsp;&emsp;Java对大小写敏感，源文件名必须与公共类名相同。<br>&emsp;&emsp;类格式：修饰符（public）+ class + 类名（ FirstSample ）首字母大写，驼峰命名，必须以字母开头，后面可以跟字母和数字的任意组合，不得使用 Java 保留字），main方法必须声明为public。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class FirstSample&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        System.out.println(&quot;We will not use &apos;Hello World!&apos;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>&emsp;&emsp;在Java中有三种书写注释的写法，第三种注释方法可以用来自动生成文档。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//单行注释</span><br><span class="line"></span><br><span class="line">/*多行注释*/</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">文档注释</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储要求</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">4字节</td>
+<td style="text-align:center">-2147483648 ~ 2147483647</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">2字节</td>
+<td style="text-align:center">-32768 ~ 32767</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">8字节</td>
+<td style="text-align:center">-9223372036854775808 ~ 9223372036854775807</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">1字节</td>
+<td style="text-align:center">-128 ~ 127</td>
+</tr>
+</tbody>
+</table>
+<h2 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">存储要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">4字节</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">8字节</td>
+</tr>
+</tbody>
+</table>
+<h2 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">转义序列</th>
+<th style="text-align:center">名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">退格</td>
+</tr>
+<tr>
+<td style="text-align:center">\t</td>
+<td style="text-align:center">退格</td>
+</tr>
+<tr>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">退格</td>
+</tr>
+<tr>
+<td style="text-align:center">\r</td>
+<td style="text-align:center">退格</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://assisiwjj.github.io/2019/04/14/重拾Java（一）Java概述/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WengYuanJun">
+      <meta itemprop="description" content="什么都懂一点，生活更多彩一些">
+      <meta itemprop="image" content="/images/timg1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Assisiwjj">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/14/重拾Java（一）Java概述/" class="post-title-link" itemprop="url">重拾Java一Java概述</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-14 18:37:07" itemprop="dateCreated datePublished" datetime="2019-04-14T18:37:07+08:00">2019-04-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-15 18:47:46" itemprop="dateModified" datetime="2019-04-15T18:47:46+08:00">2019-04-15</time>
               
             
           </span>
@@ -969,7 +1219,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
