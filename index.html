@@ -428,7 +428,7 @@
                 
               
 
-              <time title="创建时间：2019-04-15 18:47:11 / 修改时间：19:58:44" itemprop="dateCreated datePublished" datetime="2019-04-15T18:47:11+08:00">2019-04-15</time>
+              <time title="创建时间：2019-04-15 18:47:11 / 修改时间：20:14:52" itemprop="dateCreated datePublished" datetime="2019-04-15T18:47:11+08:00">2019-04-15</time>
             
 
             
@@ -601,10 +601,8 @@
 <td style="text-align:center">与</td>
 </tr>
 <tr>
-<td style="text-align:center">\</td>
-<td style="text-align:center">\</td>
-<td></td>
-<td>或</td>
+<td style="text-align:center">丨丨</td>
+<td style="text-align:center">或</td>
 </tr>
 <tr>
 <td style="text-align:center">!=</td>
@@ -637,7 +635,10 @@
 <li>%m.nf :输出的浮点型数据占 m 列，小数点保留 n 位</li>
 <li>格式字符串语法：每个格式控制以 % 开始，以空格或标点符号结尾。</li>
 </ul>
-<h1 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h1>
+<h1 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a>控制流程</h1><h2 id="if条件语句"><a href="#if条件语句" class="headerlink" title="if条件语句"></a>if条件语句</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a = 100;</span><br><span class="line">if(a == 100) &#123;</span><br><span class="line">    System.out.println(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(math &gt;= 60) &#123;</span><br><span class="line">    System.out.println(&quot;math has passed&quot;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    System.out.println(&quot;math has not passed&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2><p>&emsp;&emsp;switch语句中表达式的值必须是整型或字符型，常量值1~n必须也是整型或字符型。<br>&emsp;&emsp;首先switch语句先计算表达式的值，如果表达式的值与case后的常量值相同，则执行该case后的若干个语句，直到遇到break语句为止。如果没有break，则继续执行下一case中的若干语句，直到遇到break为止。若没有一个常量的值与表达式的值相同，则执行default后面的语句。default语句可选，如果不存在default语句，而且switch语句中的表达式的值与任何case的常量值都不相同，则switch不做任何处理。并且，同一个switch语句，case的常量值必须互不相同。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch(表达式)</span><br><span class="line">&#123; </span><br><span class="line">    case 常量值1:</span><br><span class="line">         语句块1</span><br><span class="line">         [break;]</span><br><span class="line">...</span><br><span class="line">    case 常量值n:</span><br><span class="line">         语句块n</span><br><span class="line">         [break;]</span><br><span class="line">default:</span><br><span class="line">         语句块n+1;</span><br><span class="line">         [break;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
