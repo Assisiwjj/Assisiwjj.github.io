@@ -103,17 +103,18 @@
 
 
 
-  <meta name="description" content="什么都懂一点，生活更多彩一些">
-<meta name="keywords" content="WengYuanJun博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Assisiwjj">
-<meta property="og:url" content="https://assisiwjj.github.io/archives/2019/index.html">
+  <meta name="description" content="类、超类和子类继承。利用继承，可以基于已存在的类构造一个新类。继承已存在的类就是复用这些类的方法和域。在此基础上，还可以添加一些新的方法和域，以满足需求。  关键字extends表示继承，在Java中，所有继承都是公有继承 关键字extends表明正在构造的新类派生于一个已经存在的类。已经存在的类称为超类，基类或父类，新类为子类，并且子类比超类拥有的功能更加丰富 将通用的方法放在超类中，而将具有特">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重拾Java（四）继承">
+<meta property="og:url" content="https://assisiwjj.github.io/2019/05/11/重拾Java（四）继承/index.html">
 <meta property="og:site_name" content="Assisiwjj">
-<meta property="og:description" content="什么都懂一点，生活更多彩一些">
+<meta property="og:description" content="类、超类和子类继承。利用继承，可以基于已存在的类构造一个新类。继承已存在的类就是复用这些类的方法和域。在此基础上，还可以添加一些新的方法和域，以满足需求。  关键字extends表示继承，在Java中，所有继承都是公有继承 关键字extends表明正在构造的新类派生于一个已经存在的类。已经存在的类称为超类，基类或父类，新类为子类，并且子类比超类拥有的功能更加丰富 将通用的方法放在超类中，而将具有特">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-18T12:23:18.161Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Assisiwjj">
-<meta name="twitter:description" content="什么都懂一点，生活更多彩一些">
+<meta name="twitter:title" content="重拾Java（四）继承">
+<meta name="twitter:description" content="类、超类和子类继承。利用继承，可以基于已存在的类构造一个新类。继承已存在的类就是复用这些类的方法和域。在此基础上，还可以添加一些新的方法和域，以满足需求。  关键字extends表示继承，在Java中，所有继承都是公有继承 关键字extends表明正在构造的新类派生于一个已经存在的类。已经存在的类称为超类，基类或父类，新类为子类，并且子类比超类拥有的功能更加丰富 将通用的方法放在超类中，而将具有特">
 
 
 
@@ -121,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="https://assisiwjj.github.io/archives/2019/">
+  <link rel="canonical" href="https://assisiwjj.github.io/2019/05/11/重拾Java（四）继承/">
 
 
 
@@ -131,7 +132,7 @@
   };
 </script>
 
-  <title>归档 | Assisiwjj</title>
+  <title>重拾Java（四）继承 | Assisiwjj</title>
   
 
 
@@ -179,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband">
     <a href="https://github.com/assisiwjj"><img width="149" height="149" style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     </div>
@@ -240,7 +241,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -362,279 +363,232 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://assisiwjj.github.io/2019/05/11/重拾Java（四）继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WengYuanJun">
+      <meta itemprop="description" content="什么都懂一点，生活更多彩一些">
+      <meta itemprop="image" content="/images/timg1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Assisiwjj">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">重拾Java（四）继承
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-11 16:34:57" itemprop="dateCreated datePublished" datetime="2019-05-11T16:34:57+08:00">2019-05-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-18 20:23:18" itemprop="dateModified" datetime="2019-05-18T20:23:18+08:00">2019-05-18</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/05/11/重拾Java（四）继承/" itemprop="url">
+          
             
-              <span itemprop="name">重拾Java（四）继承</span>
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-11T16:34:57+08:00" content="2019-05-11">
-          05-11
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
 
+          
 
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/18/重拾Java（三）对象与类/" itemprop="url">
-            
-              <span itemprop="name">重拾Java（三）对象与类</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-18T17:10:49+08:00" content="2019-04-18">
-          04-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/15/重拾Java（二）Java基本程序设计结构/" itemprop="url">
-            
-              <span itemprop="name">重拾Java（二）Java基本程序设计结构</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-15T18:47:11+08:00" content="2019-04-15">
-          04-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/14/重拾Java（一）Java概述/" itemprop="url">
-            
-              <span itemprop="name">重拾Java一Java概述</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-14T18:37:07+08:00" content="2019-04-14">
-          04-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <h1 id="类、超类和子类"><a href="#类、超类和子类" class="headerlink" title="类、超类和子类"></a>类、超类和子类</h1><p>继承。利用继承，可以基于已存在的类构造一个新类。继承已存在的类就是复用这些类的方法和域。在此基础上，还可以添加一些新的方法和域，以满足需求。</p>
+<ul>
+<li>关键字extends表示继承，在Java中，所有继承都是公有继承</li>
+<li>关键字extends表明正在构造的新类派生于一个已经存在的类。已经存在的类称为超类，基类或父类，新类为子类，并且子类比超类拥有的功能更加丰富</li>
+<li>将通用的方法放在超类中，而将具有特殊用途的方法放在子类中</li>
+<li>通过super实现对超类构造器的调用，使用super调用构造器的语句必须是子类构造器的第一条语句</li>
+<li>在子类中可以增加域，增加方法或覆盖超类的方法，然而绝对不能删除继承的任何域和方法</li>
+<li>一个对象变量可以指示多种实际类型的现象被称为多态，在运行时能够自动选择调用哪个方法的现象称为动态绑定</li>
+</ul>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ul>
+<li>有一个用来判断是否应该设计为继承关系的简单规则，就是“is-a”规则，它表明子类的每一个对象也是超类的对象。“is-a”规则的另一种表述法是置换法则。它表明程序中出现超类对象的任何地方都可以用子类对象置换。</li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Employee e<span class="comment">;</span></span><br><span class="line"><span class="attribute">e</span>=new Employee()<span class="comment">;</span></span><br><span class="line"><span class="attribute">e</span>=new Manager()<span class="comment">;</span></span><br><span class="line">//可以将一个子类的对象赋值给超类变量</span><br></pre></td></tr></table></figure>
+<h2 id="动态绑定"><a href="#动态绑定" class="headerlink" title="动态绑定"></a>动态绑定</h2><ul>
+<li>编译器查看对象的声明类型和方法名</li>
+<li>编译器将查看调用方法时提供的参数类型，这个过程称为重载解析</li>
+<li>在覆盖方法时，一定要保证返回类型的兼容性</li>
+<li>动态绑定有一个非常重要的特性：无需对现存的代码进行修改，就可+ 以对程序进行扩展</li>
+<li>在覆盖一个方法的时候，子类方法不能低于超类方法的可见性，如果超类方法是public，子类方法一定要声明为public</li>
+</ul>
+<h2 id="阻止继承final"><a href="#阻止继承final" class="headerlink" title="阻止继承final"></a>阻止继承final</h2><ul>
+<li>不允许扩展的类被称为final类</li>
+<li>类中的特定方法也可以被声明为final，如果这样做，子类不能覆盖这个方法（final类中的所有方法自动的成为final方法）</li>
+<li>对于final域来说，构造对象之后就不允许改变他们的值了</li>
+</ul>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2>
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/11/林散之笔谈书法节选/" itemprop="url">
-            
-              <span itemprop="name">林散之笔谈书法节选</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-11T15:14:30+08:00" content="2019-04-11">
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/03/Fruit-house-api说明指南/" itemprop="url">
-            
-              <span itemprop="name">Fruit-house-api说明指南</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T15:33:54+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/18/重拾Java（三）对象与类/" rel="next" title="重拾Java（三）对象与类">
+                <i class="fa fa-chevron-left"></i> 重拾Java（三）对象与类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -654,8 +608,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -794,6 +757,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类、超类和子类"><span class="nav-number">1.</span> <span class="nav-text">类、超类和子类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多态"><span class="nav-number">1.1.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态绑定"><span class="nav-number">1.2.</span> <span class="nav-text">动态绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻止继承final"><span class="nav-number">1.3.</span> <span class="nav-text">阻止继承final</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制类型转换"><span class="nav-number">1.4.</span> <span class="nav-text">强制类型转换</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -921,6 +901,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -936,6 +920,8 @@
 
   
 
+
+  
 
 
   

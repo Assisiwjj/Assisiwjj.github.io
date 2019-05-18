@@ -383,6 +383,203 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://assisiwjj.github.io/2019/05/11/重拾Java（四）继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WengYuanJun">
+      <meta itemprop="description" content="什么都懂一点，生活更多彩一些">
+      <meta itemprop="image" content="/images/timg1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Assisiwjj">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/11/重拾Java（四）继承/" class="post-title-link" itemprop="url">重拾Java（四）继承</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-11 16:34:57" itemprop="dateCreated datePublished" datetime="2019-05-11T16:34:57+08:00">2019-05-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-18 20:23:18" itemprop="dateModified" datetime="2019-05-18T20:23:18+08:00">2019-05-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="类、超类和子类"><a href="#类、超类和子类" class="headerlink" title="类、超类和子类"></a>类、超类和子类</h1><p>继承。利用继承，可以基于已存在的类构造一个新类。继承已存在的类就是复用这些类的方法和域。在此基础上，还可以添加一些新的方法和域，以满足需求。</p>
+<ul>
+<li>关键字extends表示继承，在Java中，所有继承都是公有继承</li>
+<li>关键字extends表明正在构造的新类派生于一个已经存在的类。已经存在的类称为超类，基类或父类，新类为子类，并且子类比超类拥有的功能更加丰富</li>
+<li>将通用的方法放在超类中，而将具有特殊用途的方法放在子类中</li>
+<li>通过super实现对超类构造器的调用，使用super调用构造器的语句必须是子类构造器的第一条语句</li>
+<li>在子类中可以增加域，增加方法或覆盖超类的方法，然而绝对不能删除继承的任何域和方法</li>
+<li>一个对象变量可以指示多种实际类型的现象被称为多态，在运行时能够自动选择调用哪个方法的现象称为动态绑定</li>
+</ul>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ul>
+<li>有一个用来判断是否应该设计为继承关系的简单规则，就是“is-a”规则，它表明子类的每一个对象也是超类的对象。“is-a”规则的另一种表述法是置换法则。它表明程序中出现超类对象的任何地方都可以用子类对象置换。</li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Employee e<span class="comment">;</span></span><br><span class="line"><span class="attribute">e</span>=new Employee()<span class="comment">;</span></span><br><span class="line"><span class="attribute">e</span>=new Manager()<span class="comment">;</span></span><br><span class="line">//可以将一个子类的对象赋值给超类变量</span><br></pre></td></tr></table></figure>
+<h2 id="动态绑定"><a href="#动态绑定" class="headerlink" title="动态绑定"></a>动态绑定</h2><ul>
+<li>编译器查看对象的声明类型和方法名</li>
+<li>编译器将查看调用方法时提供的参数类型，这个过程称为重载解析</li>
+<li>在覆盖方法时，一定要保证返回类型的兼容性</li>
+<li>动态绑定有一个非常重要的特性：无需对现存的代码进行修改，就可+ 以对程序进行扩展</li>
+<li>在覆盖一个方法的时候，子类方法不能低于超类方法的可见性，如果超类方法是public，子类方法一定要声明为public</li>
+</ul>
+<h2 id="阻止继承final"><a href="#阻止继承final" class="headerlink" title="阻止继承final"></a>阻止继承final</h2><ul>
+<li>不允许扩展的类被称为final类</li>
+<li>类中的特定方法也可以被声明为final，如果这样做，子类不能覆盖这个方法（final类中的所有方法自动的成为final方法）</li>
+<li>对于final域来说，构造对象之后就不允许改变他们的值了</li>
+</ul>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://assisiwjj.github.io/2019/04/18/重拾Java（三）对象与类/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -445,7 +642,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-24 15:46:47" itemprop="dateModified" datetime="2019-04-24T15:46:47+08:00">2019-04-24</time>
+                <time title="修改时间：2019-05-18 16:40:25" itemprop="dateModified" datetime="2019-05-18T16:40:25+08:00">2019-05-18</time>
               
             
           </span>
@@ -502,12 +699,54 @@
             <h1 id="面向对象程序设计概述"><a href="#面向对象程序设计概述" class="headerlink" title="面向对象程序设计概述"></a>面向对象程序设计概述</h1><p>&emsp;&emsp;面向对象程序设计（简称 OOP ）是当今主流的程序设计类型。<br>&emsp;&emsp;面向对象的程序是由杜喜爱那个组成的，每个对象包含对用户公开的特定功能部分和隐藏的实现部分。程序中的很多对象来自标准库，还有一些是自定义的。从根本上来说，只要对象能够满足要求，就不必关心其功能的具体实现过程。<br>&emsp;&emsp;对于一些规模较小的问题，将其分解为过程的开发模式比较理想。而面向对象更加适用于解决规模较大的问题。要想实现一个简单的 Web浏览器 可能需要大概2000个过程，这些过程可能需要对一组全局数据进行操作。采用面向对象的设计风格，可能只需要大约100个类，每个类平均包含20个方法。  </p>
 <h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>&emsp;&emsp;类（class）是构造对象的模板或蓝图，由类构造对象&amp;&emsp;&emsp;的过程称为创建类的实例。<br>封装是将数据和行为组合在一个包中，并对对象的使用者隐藏了数据的实现方式。数据称为实例域，操纵数据的过程称为方法。实现封装的关键在于绝对不能让类中的方法直接访问其他类的实例域。这是提高重用性和可靠性的关键。<br>&emsp;&emsp;定义类的方法：修饰符 返回值类型 方法名 ( 参数列表) { 方法体语句； }</p>
 <h2 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h2><p>&emsp;&emsp;依赖：应该尽可能的将相互依赖的类减至最少（耦合度最小）。<br>&emsp;&emsp;聚合：类A的对象包含类B的对象 。<br>&emsp;&emsp;继承：子类继承父类，拥有父类方法的同时还可以定义自己的方法。  </p>
-<h1 id="使用预定义类"><a href="#使用预定义类" class="headerlink" title="使用预定义类"></a>使用预定义类</h1><h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><ul>
-<li>构造器是一种特殊的方法，用来构造并初始化对象。  </li>
-<li>构造器的名字应该与类名相同。</li>
-<li>构造器总是伴随着new操作符的执行被调用</li>
+<h1 id="用户自定义类"><a href="#用户自定义类" class="headerlink" title="用户自定义类"></a>用户自定义类</h1><ul>
+<li>在一个源文件中，只能有一个公有类，但可以有任意数目的非公有类。</li>
+<li>this代表本类，为隐式参数</li>
 </ul>
-<h1 id="用户自定义类型"><a href="#用户自定义类型" class="headerlink" title="用户自定义类型"></a>用户自定义类型</h1>
+<h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><ul>
+<li>构造器是一种特殊的方法，用来构造并初始化对象。  </li>
+<li>构造器与类同名。</li>
+<li>每个类可以有一个以上的构造器。</li>
+<li>构造器可以有0个，1个或多个参数。</li>
+<li>构造器没有返回值。</li>
+<li>修饰符一般为public。</li>
+<li>构造器总是伴随着new操作一起调用。</li>
+</ul>
+<h2 id="封装的优点"><a href="#封装的优点" class="headerlink" title="封装的优点"></a>封装的优点</h2><p>一般需要获得或设置实例域的值，需要提供三项内容：  </p>
+<ul>
+<li>一个私有的数据域；</li>
+<li>一个公有的域访问器方法；</li>
+<li>一个公有的域更改器方法；</li>
+</ul>
+<p>可以改变内部实现，除了该类的方法之外，不会影响其他代码。</p>
+<h2 id="final实例域"><a href="#final实例域" class="headerlink" title="final实例域"></a>final实例域</h2><p>构建对象是必须初始化这样的域，并且在后面的操作中，不能够再对它进行修改。</p>
+<h1 id="静态域和静态方法"><a href="#静态域和静态方法" class="headerlink" title="静态域和静态方法"></a>静态域和静态方法</h1><h2 id="静态域"><a href="#静态域" class="headerlink" title="静态域"></a>静态域</h2><p>如果把域定义为static，它属于类，而不属于任何独立的对象,即每个实例都将共享一个域。</p>
+<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><p>静态方法是一种不能向对象实施操作的方法，建议使用类名，而不是对象来调用静态方法。<br>使用静态方法的情况有两种，一种是一个方法不需要访问对象状态，其所需参数都是通过显式参数提供。另一种是一个方法只需要访问类的静态域。</p>
+<h1 id="对象构造"><a href="#对象构造" class="headerlink" title="对象构造"></a>对象构造</h1><h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><ul>
+<li>如果多个方法有相同的名字、不同的参数，便产生了重载。  </li>
+<li>编译器必须挑选出具体执行哪个方法，他通过用各个方法给出的参数类型与特定方法调用所使用的值类型进行匹配来挑选出相应的方法。  </li>
+<li>如果编译器找不到匹配的参数，或者找出多个可能的匹配，就会产生编译时错误，这个过程被称为重载解析。</li>
+<li>Java允许重载任何方法，而不只是构造器方法。</li>
+<li>如果在构造器中没有显式的给域赋值，那么就会被自动的赋为默认值：数值为0，布尔型为false，对象引用为null。</li>
+</ul>
+<h2 id="调用另一个构造器"><a href="#调用另一个构造器" class="headerlink" title="调用另一个构造器"></a>调用另一个构造器</h2><p>当调用new Employee(6000)时，Employee(double)构造器将调用Employee(String, double)构造器，采用这种方式使用this关键字非常有用，这样对公共的构造器代码部分之便写一次即可。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">double</span> s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>(<span class="string">"Employee #"</span> + nextId, s);</span><br><span class="line">    nextId++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="包"><a href="#包" class="headerlink" title="包"></a>包</h1><p>Java允许使用包将类组织起来。借助于包可以方便地组织自己的代码，并将自己的代码和别人提供的代码库分开管理。<br>使用包的主要原因是确保类名的唯一性。为了确保包名的唯一性，Sun公司建议将公司的因特网域名以逆序的形式作为报名，并且对于不同的项目使用不同的子包。</p>
+<h2 id="类的导入"><a href="#类的导入" class="headerlink" title="类的导入"></a>类的导入</h2><p>导入java.util 包中所有的类<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.*;</span></span><br></pre></td></tr></table></figure></p>
+<p>导入一包中的特定类<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.Date;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="将类放入包中"><a href="#将类放入包中" class="headerlink" title="将类放入包中"></a>将类放入包中</h2><p>要想将一个类放入包中，就必须将包的名字放在源文件的开头，包中定义类的代码之前。<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> <span class="title">com.horstmann.corejava;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h1><p>JDK中包含一个很有用的工具,叫做javadoc，它可以由源文件生成一个HTML文档</p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">*<span class="string">.........</span></span><br><span class="line">*<span class="string">.........</span></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<p>在开始的 / <em> </em> 之后，第一行或几行是关于类、变量和方法的主要描述。之后，你可以包含一个或多个各种各样的 @ 标签。每一个 @ 标签必须在一个新行的开始或者在一行的开始紧跟星号(*)</p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 数组帮助类</span></span><br><span class="line"><span class="comment">*定义一个用于操作数组的工具类。</span></span><br><span class="line"><span class="comment">*比如：获取最值，排序，折半。</span></span><br><span class="line"><span class="comment">*<span class="doctag">@author</span> 张三</span></span><br><span class="line"><span class="comment">*<span class="doctag">@version</span> V1.0</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayTool</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    该类的空参数构造函数。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ArrayTool</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    获取int数组的最大值。</span></span><br><span class="line"><span class="comment">    <span class="doctag">@param</span> arr 用于接收一个int类型的数组。</span></span><br><span class="line"><span class="comment">    <span class="doctag">@return</span> 返回该数组中的最大值。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = arr[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">1</span>; x&lt;arr.length; x++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[x]&gt;max)</span><br><span class="line">                max = arr[x];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    对int数组进行从小打到的排序。</span></span><br><span class="line"><span class="comment">    <span class="doctag">@param</span> arr 用于接收一个int类型的数组。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="类设计技巧"><a href="#类设计技巧" class="headerlink" title="类设计技巧"></a>类设计技巧</h1><ul>
+<li>一定要保证数据私有</li>
+<li>一定要对数据初始化</li>
+<li>不要在类中使用过多的基本类型</li>
+<li>不是所有的域都需要独立的域访问器和域更改器</li>
+<li>将职责过多的类进行分解</li>
+<li>类名和方法名要能够体现他们的职责</li>
+</ul>
+
           
         
       
@@ -625,7 +864,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-18 17:04:02" itemprop="dateModified" datetime="2019-04-18T17:04:02+08:00">2019-04-18</time>
+                <time title="修改时间：2019-05-18 16:40:32" itemprop="dateModified" datetime="2019-05-18T16:40:32+08:00">2019-05-18</time>
               
             
           </span>
@@ -965,7 +1204,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-15 18:47:46" itemprop="dateModified" datetime="2019-04-15T18:47:46+08:00">2019-04-15</time>
+                <time title="修改时间：2019-05-18 16:40:13" itemprop="dateModified" datetime="2019-05-18T16:40:13+08:00">2019-05-18</time>
               
             
           </span>
@@ -1155,7 +1394,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-13 17:11:18" itemprop="dateModified" datetime="2019-04-13T17:11:18+08:00">2019-04-13</time>
+                <time title="修改时间：2019-05-18 16:40:21" itemprop="dateModified" datetime="2019-05-18T16:40:21+08:00">2019-05-18</time>
               
             
           </span>
@@ -1347,7 +1586,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-11 20:19:19" itemprop="dateModified" datetime="2019-04-11T20:19:19+08:00">2019-04-11</time>
+                <time title="修改时间：2019-05-18 16:40:17" itemprop="dateModified" datetime="2019-05-18T16:40:17+08:00">2019-05-18</time>
               
             
           </span>
@@ -1501,7 +1740,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
