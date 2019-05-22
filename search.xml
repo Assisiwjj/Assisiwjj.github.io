@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[重拾Java（五）接口与内部类]]></title>
     <url>%2F2019%2F05%2F21%2F%E9%87%8D%E6%8B%BEJava%EF%BC%88%E4%BA%94%EF%BC%89%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB%2F</url>
-    <content type="text"><![CDATA[接口 接口技术主要用来描述类具有什么功能，而并不给出每个功能的具体实现。 一个类可以实现一个或多个接口，并在需要借口的地方，随时使用实现了相应接口的对象。]]></content>
+    <content type="text"><![CDATA[接口 接口技术主要用来描述类具有什么功能，而并不给出每个功能的具体实现。 一个类可以实现一个或多个接口，并在需要借口的地方，随时使用实现了相应接口的对象。 在接口中可以定义常量 接口绝不能含有实例域，也不能在接口中实现方法 为了让类实现一个接口，需要两个步骤：（1）将类声明为实现给定的接口。（2）对接口中的所有方法进行定义 要将类声明为实现某个接口，需要使用关键字implements 在实现接口时，必须把方法声明为public 接口的特性接口不是类，尤其不能使用new运算符实例化一个接口：1x = new Comparable();//ERROR 接口不能构造对象，却能声明接口的变量：1Comparable x;//OK 接口变量必须引用实现了接口的类对象：1x = new Employee;//OK 接口与抽象类使用抽象类表示通用属性存在这样一个问题：每个类只能拓展于一个类1class Employee extends Person, Comparable//ERROR 但每个类可以向下面这样实现多个接口：1class Employee extends Person implements Comparable//OK Java不支持多继承的主要原因是多继承会让语言本身变得非常复杂，效率也会降低 接口可以提供多重继承的大多数好处，同时还能避免多重继承的复杂性和低效性 对象克隆]]></content>
       <categories>
         <category>Java</category>
       </categories>
