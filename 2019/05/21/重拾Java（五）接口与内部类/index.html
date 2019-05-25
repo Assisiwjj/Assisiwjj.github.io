@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Assisiwjj">
 <meta property="og:description" content="接口 接口技术主要用来描述类具有什么功能，而并不给出每个功能的具体实现。 一个类可以实现一个或多个接口，并在需要借口的地方，随时使用实现了相应接口的对象。 在接口中可以定义常量 接口绝不能含有实例域，也不能在接口中实现方法 为了让类实现一个接口，需要两个步骤：（1）将类声明为实现给定的接口。（2）对接口中的所有方法进行定义 要将类声明为实现某个接口，需要使用关键字implements 在实现接口时">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-23T11:25:23.818Z">
+<meta property="og:updated_time" content="2019-05-25T11:46:33.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重拾Java（五）接口与内部类">
 <meta name="twitter:description" content="接口 接口技术主要用来描述类具有什么功能，而并不给出每个功能的具体实现。 一个类可以实现一个或多个接口，并在需要借口的地方，随时使用实现了相应接口的对象。 在接口中可以定义常量 接口绝不能含有实例域，也不能在接口中实现方法 为了让类实现一个接口，需要两个步骤：（1）将类声明为实现给定的接口。（2）对接口中的所有方法进行定义 要将类声明为实现某个接口，需要使用关键字implements 在实现接口时">
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-23 19:25:23" itemprop="dateModified" datetime="2019-05-23T19:25:23+08:00">2019-05-23</time>
+                <time title="修改时间：2019-05-25 19:46:33" itemprop="dateModified" datetime="2019-05-25T19:46:33+08:00">2019-05-25</time>
               
             
           </span>
@@ -514,7 +514,15 @@
 <li>接口可以提供多重继承的大多数好处，同时还能避免多重继承的复杂性和低效性</li>
 </ul>
 <h1 id="对象克隆"><a href="#对象克隆" class="headerlink" title="对象克隆"></a>对象克隆</h1><p>当拷贝一个变量时，原始变量与拷贝变量引用同一个对象，这就是说，改变一个变量所引用的对象将会对另一个变量产生影响。<br>在 Java语言中，用简单的赋值语句是不能满足这种需求的。要满足这种需求虽然有很多途径，但实现clone（）方法是其中最简单，也是最高效的手段。 </p>
-<h1 id="clone方法"><a href="#clone方法" class="headerlink" title="clone方法"></a>clone方法</h1>
+<h2 id="clone方法"><a href="#clone方法" class="headerlink" title="clone方法"></a>clone方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CloneClass</span> <span class="keyword">implements</span> <span class="title">Cloneable</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> aInt; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">clone</span><span class="params">()</span></span>&#123;</span><br><span class="line">        CloneClass o = <span class="keyword">null</span>; </span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            o = (CloneClass)<span class="keyword">super</span>.clone(); </span><br><span class="line">        &#125;<span class="keyword">catch</span>(CloneNotSupportedException e)&#123;</span><br><span class="line">            e.printStackTrace(); </span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">return</span> o; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>clone要求：</p>
+<ul>
+<li>需要实现Cloneable接口</li>
+<li>使用public访问修饰符重新定义clone方法</li>
+<li>在clone()方法中调用了super.clone()</li>
+</ul>
+<h2 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="headerlink" title="深拷贝与浅拷贝"></a>深拷贝与浅拷贝</h2><p>浅拷贝是指拷贝对象时仅仅拷贝对象本身（包括对象中的基本变量），而不拷贝对象包含的引用指向的对象。深拷贝不仅拷贝对象本身，而且拷贝对象包含的引用指向的所有对象。举例来说更加清楚：对象 A1中包含对 B1的引用，B1中包含对 C1的引用。浅拷贝 A1得到 A2，A2 中依然包含对 B1的引用，B1中依然包含对C1的引用。深拷贝则是对浅拷贝的递归，深拷贝 A1得到 A2，A2中包含对 B2（B1的copy）的引用，B2 中包含对 C2（C1的copy）的引用<br>若不对clone()方法进行改写，则调用此方法得到的对象即为浅拷贝</p>
+
       
     </div>
 
@@ -761,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口的特性"><span class="nav-number">1.1.</span> <span class="nav-text">接口的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口与抽象类"><span class="nav-number">1.2.</span> <span class="nav-text">接口与抽象类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象克隆"><span class="nav-number">2.</span> <span class="nav-text">对象克隆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#clone方法"><span class="nav-number">3.</span> <span class="nav-text">clone方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口的特性"><span class="nav-number">1.1.</span> <span class="nav-text">接口的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口与抽象类"><span class="nav-number">1.2.</span> <span class="nav-text">接口与抽象类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象克隆"><span class="nav-number">2.</span> <span class="nav-text">对象克隆</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#clone方法"><span class="nav-number">2.1.</span> <span class="nav-text">clone方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深拷贝与浅拷贝"><span class="nav-number">2.2.</span> <span class="nav-text">深拷贝与浅拷贝</span></a></li></ol></li></ol></div>
             
 
           </div>
