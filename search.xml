@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[重拾Java（六）异常、断言、日志和调试]]></title>
     <url>%2F2019%2F05%2F25%2F%E9%87%8D%E6%8B%BEJava%EF%BC%88%E5%85%AD%EF%BC%89%E5%BC%82%E5%B8%B8%E3%80%81%E6%96%AD%E8%A8%80%E3%80%81%E6%97%A5%E5%BF%97%E5%92%8C%E8%B0%83%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[异常]]></content>
+    <content type="text"><![CDATA[异常所有的异常都是由Throwable继承而来，但是在下一层立刻分解为两个分支：error和exception： error类层次结构描述了Java运行时系统内部错误和资源耗尽错误 exception层次机构又分解为两个分支：由程序错误导致的异常属于RuntimeException；而程序本身没问题，但有I/O错误这一类问题导致的异常属于其他异常RuntimeException异常包含下面几种情况： 1）错误的类型转换 2）数组访问越界 3）访问空指针其他异常包含下面几种情况： 1）试图在文件尾部后面读取数据 2）试图打开一个不存在的文件 3）试图根据指定的字符串查找Class对象，而这个字符串表示的类并不存在]]></content>
       <categories>
         <category>Java</category>
       </categories>

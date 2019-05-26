@@ -428,12 +428,24 @@
                 
               
 
-              <time title="创建时间：2019-05-25 20:30:57 / 修改时间：20:33:13" itemprop="dateCreated datePublished" datetime="2019-05-25T20:30:57+08:00">2019-05-25</time>
+              <time title="创建时间：2019-05-25 20:30:57" itemprop="dateCreated datePublished" datetime="2019-05-25T20:30:57+08:00">2019-05-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-26 18:52:57" itemprop="dateModified" datetime="2019-05-26T18:52:57+08:00">2019-05-26</time>
               
             
           </span>
@@ -487,7 +499,18 @@
       
         
           
-            <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1>
+            <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>所有的异常都是由Throwable继承而来，但是在下一层立刻分解为两个分支：error和exception：</p>
+<ul>
+<li>error类层次结构描述了Java运行时系统内部错误和资源耗尽错误</li>
+<li>exception层次机构又分解为两个分支：<br>由程序错误导致的异常属于RuntimeException；而程序本身没问题，但有I/O错误这一类问题导致的异常属于其他异常<br>RuntimeException异常包含下面几种情况：</li>
+<li>1）错误的类型转换</li>
+<li>2）数组访问越界</li>
+<li>3）访问空指针<br>其他异常包含下面几种情况：  </li>
+<li>1）试图在文件尾部后面读取数据</li>
+<li>2）试图打开一个不存在的文件</li>
+<li>3）试图根据指定的字符串查找Class对象，而这个字符串表示的类并不存在</li>
+</ul>
+
           
         
       
