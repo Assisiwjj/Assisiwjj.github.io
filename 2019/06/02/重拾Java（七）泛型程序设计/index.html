@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="简单泛型">
+  <meta name="description" content="简单泛型使用 使用泛型的好处是利用类型参数T可以使得代码具有更好的可读性，人们一看就知道这个数组列表包含的对象，同时放不进其他类型对象。  12345678910111213141516package generic;import java.util.ArrayList;import charactor.APHero;public class TestGeneric &amp;#123;	public s">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="重拾Java（七）泛型程序设计">
 <meta property="og:url" content="https://assisiwjj.github.io/2019/06/02/重拾Java（七）泛型程序设计/index.html">
 <meta property="og:site_name" content="Assisiwjj">
-<meta property="og:description" content="简单泛型">
+<meta property="og:description" content="简单泛型使用 使用泛型的好处是利用类型参数T可以使得代码具有更好的可读性，人们一看就知道这个数组列表包含的对象，同时放不进其他类型对象。  12345678910111213141516package generic;import java.util.ArrayList;import charactor.APHero;public class TestGeneric &amp;#123;	public s">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-02T08:00:53.924Z">
+<meta property="og:updated_time" content="2019-06-21T08:45:02.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重拾Java（七）泛型程序设计">
-<meta name="twitter:description" content="简单泛型">
+<meta name="twitter:description" content="简单泛型使用 使用泛型的好处是利用类型参数T可以使得代码具有更好的可读性，人们一看就知道这个数组列表包含的对象，同时放不进其他类型对象。  12345678910111213141516package generic;import java.util.ArrayList;import charactor.APHero;public class TestGeneric &amp;#123;	public s">
 
 
 
@@ -426,12 +426,24 @@
                 
               
 
-              <time title="创建时间：2019-06-02 15:56:34 / 修改时间：16:00:53" itemprop="dateCreated datePublished" datetime="2019-06-02T15:56:34+08:00">2019-06-02</time>
+              <time title="创建时间：2019-06-02 15:56:34" itemprop="dateCreated datePublished" datetime="2019-06-02T15:56:34+08:00">2019-06-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-21 16:45:02" itemprop="dateModified" datetime="2019-06-21T16:45:02+08:00">2019-06-21</time>
               
             
           </span>
@@ -483,7 +495,18 @@
       
 
       
-        <h1 id="简单泛型"><a href="#简单泛型" class="headerlink" title="简单泛型"></a>简单泛型</h1>
+        <h1 id="简单泛型使用"><a href="#简单泛型使用" class="headerlink" title="简单泛型使用"></a>简单泛型使用</h1><ul>
+<li>使用泛型的好处是利用类型参数T可以使得代码具有更好的可读性，人们一看就知道这个数组列表包含的对象，同时放不进其他类型对象。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> generic;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> charactor.APHero;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestGeneric</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ArrayList&lt;APHero&gt; heros = <span class="keyword">new</span> ArrayList&lt;APHero&gt;();</span><br><span class="line">		<span class="comment">//只有APHero可以放进去		</span></span><br><span class="line">		heros.add(<span class="keyword">new</span> APHero());</span><br><span class="line">		<span class="comment">//ADHero甚至放不进去</span></span><br><span class="line">		<span class="comment">//heros.add(new ADHero());</span></span><br><span class="line">		<span class="comment">//获取的时候也不需要进行转型，因为取出来一定是APHero</span></span><br><span class="line">		APHero apHero =  heros.get(<span class="number">0</span>);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>泛型集合可以放入泛型类型的子类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> generic;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> property.Item;</span><br><span class="line"><span class="keyword">import</span> charactor.ADHero;</span><br><span class="line"><span class="keyword">import</span> charactor.APHero;</span><br><span class="line"><span class="keyword">import</span> charactor.Hero;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestGeneric</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Hero&gt; heros = <span class="keyword">new</span> ArrayList&lt;Hero&gt;();  </span><br><span class="line">        <span class="comment">//只有作为Hero的子类可以放进去     </span></span><br><span class="line">        heros.add(<span class="keyword">new</span> APHero());</span><br><span class="line">        heros.add(<span class="keyword">new</span> ADHero()); </span><br><span class="line">        <span class="comment">//和Hero无关的类型Item还是放不进去</span></span><br><span class="line">        <span class="comment">//heros.add(new Item());    </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>泛型的简写</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Hero&gt; heros = <span class="keyword">new</span> ArrayList&lt;Hero&gt;();</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -730,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单泛型"><span class="nav-number">1.</span> <span class="nav-text">简单泛型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单泛型使用"><span class="nav-number">1.</span> <span class="nav-text">简单泛型使用</span></a></li></ol></div>
             
 
           </div>
